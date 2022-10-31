@@ -1,9 +1,9 @@
 import { API_URL } from "../config";
 
-//selectors
+
 export const getAllTables = ({ tables }) => tables;
 
-// actions
+
 const createActionName = actionName => `app/tables/${actionName}`;
 const UPDATE_TABLES = createActionName('UPDATE_TABLES');
 
@@ -17,7 +17,8 @@ export const fetchTables = () => {
   }
 };
 
-// action creators
+
+
 const tablesReducer = (statePart = [], action) => {
   switch (action.type) {
     case UPDATE_TABLES:

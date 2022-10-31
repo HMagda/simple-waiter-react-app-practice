@@ -4,6 +4,7 @@ import {getAllTables} from "../../redux/tablesRedux";
 import {useSelector} from "react-redux";
 
 const AllTables = () => {
+    
   const AllTables = useSelector(getAllTables);
 
   return (
@@ -12,7 +13,7 @@ const AllTables = () => {
         {AllTables.map((table) => (
           <tr>
             <td>
-              <h2>{table.title}</h2>
+              <h2>Table {table.id}</h2>
             </td>
             <td>
               <p className="mt-3">
