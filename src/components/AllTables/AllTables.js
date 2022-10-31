@@ -7,6 +7,7 @@ const AllTables = () => {
     
   const AllTables = useSelector(getAllTables);
 
+  if (AllTables.length === 0) return <h2>Loading...</h2>;
   return (
     <Table responsive="md">
       <tbody>
